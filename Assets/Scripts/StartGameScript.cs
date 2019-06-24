@@ -1,13 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class StartGameScript : MonoBehaviour
+public class StartGameScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    public GameObject Cadre1;
+    public TextMeshProUGUI StartButtonText;
     // Start is called before the first frame update
     void Start()
     {
+        Cadre1.SetActive(false);
 
     }
 
@@ -20,5 +25,30 @@ public class StartGameScript : MonoBehaviour
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Debug.Log("Start");
+        //GameObject test = GameObject.Find("StartButtonText");
+        //TextMeshProUGUI test2 = test.GetComponent<TextMeshProUGUI>();
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if(name == "StartButton")
+        {
+            Cadre1.SetActive(true);
+            StartButtonText.fontStyle = FontStyles.Italic;
+
+
+        }
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (name == "StartButton")
+        {
+            Cadre1.SetActive(false);
+            StartButtonText.fontStyle = FontStyles.Normal;
+
+
+
+
+        }
     }
 }
