@@ -139,7 +139,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!33 &480584689
 MeshFilter:
@@ -222,14 +222,14 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: 1
+  mTrackableName: 3
   mPreserveChildSize: 0
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/RDP2.xml
-  mAspectRatio: 1.184143
+  mAspectRatio: 1.59
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 1.184143
+  mHeight: 1.59
 --- !u!4 &480584694
 Transform:
   m_ObjectHideFlags: 0
@@ -239,11 +239,11 @@ Transform:
   m_GameObject: {fileID: 480584688}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.6, z: 1.5}
-  m_LocalScale: {x: 1.184143, y: 1.184143, z: 1.184143}
+  m_LocalScale: {x: 1.59, y: 1.59, z: 1.59}
   m_Children:
   - {fileID: 1687101188}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!21 &975988768
 Material:
@@ -252,9 +252,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: '1Material
+  m_Name: '3Material
 
-    17576'
+    19864'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -267,7 +267,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 732c30491ed14d5eaf6613cf0621efe3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3bbba27ae4e94a86866ce2908db4471d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -362,7 +362,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1687101187
 GameObject:
@@ -381,7 +381,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &1687101188
 Transform:
@@ -442,7 +442,7 @@ MeshRenderer:
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
+  m_AutoUVMaxAngle: 92
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
@@ -572,7 +572,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ImageTargetMesh17566
+  m_Name: ImageTargetMesh19854
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -584,7 +584,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.4222463, y: 0, z: 0.5}
+      m_Extent: {x: 0.3144654, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -663,7 +663,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: ab30d8be00000000000000bf000000000000803f000000000000000000000000ab30d8be000000000000003f000000000000803f00000000000000000000803fab30d83e00000000000000bf000000000000803f000000000000803f00000000ab30d83e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: 9c01a1be00000000000000bf000000000000803f0000000000000000000000009c01a1be000000000000003f000000000000803f00000000000000000000803f9c01a13e00000000000000bf000000000000803f000000000000803f000000009c01a13e000000000000003f000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -718,7 +718,7 @@ Mesh:
     m_UVInfo: 0
   m_LocalAABB:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.28947368, y: 0, z: 0.5}
+    m_Extent: {x: 0.44557843, y: 0, z: 0.5}
   m_MeshUsageFlags: 0
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
