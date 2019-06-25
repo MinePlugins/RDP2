@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UserManager : MonoBehaviour
 {
+
+    public InputField usernameLogin;
+    public InputField passwordLogin;
 
     public InputField usernameRegister;
     public InputField passwordRegister;
@@ -21,8 +25,8 @@ public class UserManager : MonoBehaviour
     IEnumerator LoginEnum()
     {
         WWWForm form = new WWWForm();
-        form.AddField("username", "louis");
-        form.AddField("password", "louis1234");
+        form.AddField("username", usernameLogin.text);
+        form.AddField("password", passwordLogin.text);
 
         using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/login.php", form))
         {
@@ -34,7 +38,15 @@ public class UserManager : MonoBehaviour
             }
             else
             {
-                Debug.Log(www.downloadHandler.text);
+                WebResponse res = JsonUtility.FromJson<WebResponse>(www.downloadHandler.text);
+                if (res.error)
+                {
+                    Debug.Log(res.message);
+                }
+                else
+                {
+                    SceneManager.LoadScene("Menu");
+                }
             }
         }
     }
@@ -69,7 +81,15 @@ public class UserManager : MonoBehaviour
             }
             else
             {
-                Debug.Log(www.downloadHandler.text);
+                WebResponse res = JsonUtility.FromJson<WebResponse>(www.downloadHandler.text);
+                if (res.error)
+                {
+                    Debug.Log(res.message);
+                }
+                else
+                {
+                    SceneManager.LoadScene("Menu");
+                }
             }
         }
     }
