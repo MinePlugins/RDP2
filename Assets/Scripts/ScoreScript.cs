@@ -17,6 +17,10 @@ public class ScoreScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     void Start()
     {
         Cadre1.SetActive(false);
+        ScoreText1.text = "";
+        ScoreText2.text = "";
+        ScoreText3.text = "";
+        ScoreText4.text = "";
 
     }
 
@@ -33,7 +37,10 @@ public class ScoreScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void ScoreDisplay()
     {
         ScoreButton.SetActive(false);
-        ScoreText1.text = "RANK    " + "PSEUDO    "+"    SCORE";
+        ScoreText1.text = "RANK    " + "PSEUDO    " + "    SCORE";
+        ScoreText2.text = "RANK    " + "PSEUDO    " + "    SCORE";
+        ScoreText3.text = "RANK    " + "PSEUDO    " + "    SCORE";
+        ScoreText4.text = "RANK    " + "PSEUDO    " + "    SCORE";
     }
 
     public void OnPointerEnter(PointerEventData eventData)
