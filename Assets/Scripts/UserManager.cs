@@ -2,29 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class UserManager : MonoBehaviour
 {
+
+    public InputField usernameRegister;
+    public InputField passwordRegister;
+    public InputField passwordAgainRegister;
+    public InputField emailRegister;
+
     public void Login()
     {
         Debug.Log("Login");
         StartCoroutine(LoginEnum());
     }
 
-    public void Register()
-    {
-        Debug.Log("Register");
-        StartCoroutine(RegisterEnum());
-    }
-
-    IEnumerator RegisterEnum()
+    IEnumerator LoginEnum()
     {
         WWWForm form = new WWWForm();
         form.AddField("username", "louis");
         form.AddField("password", "louis1234");
-        form.AddField("email", "louis@estiam.com");
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/register.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/login.php", form))
         {
             yield return www.SendWebRequest();
 
@@ -39,13 +39,27 @@ public class UserManager : MonoBehaviour
         }
     }
 
-    IEnumerator LoginEnum()
+    public void Register()
+    {
+        //Debug.Log("Register");
+        if (passwordRegister.text == passwordAgainRegister.text)
+        {
+            StartCoroutine(RegisterEnum());
+        }
+        else
+        {
+            Debug.Log("password does not match");
+        }
+    }
+
+    IEnumerator RegisterEnum()
     {
         WWWForm form = new WWWForm();
-        form.AddField("username", "louis");
-        form.AddField("password", "louis1234");
+        form.AddField("username", usernameRegister.text);
+        form.AddField("password", passwordRegister.text);
+        form.AddField("email", emailRegister.text);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/login.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/register.php", form))
         {
             yield return www.SendWebRequest();
 
