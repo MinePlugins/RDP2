@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
@@ -18,7 +19,7 @@ public class UserManager : MonoBehaviour
 
     public void MoveToRegister()
     {
-        SceneManager.LoadScene("Login");
+        SceneManager.LoadScene("Register");
     }
 
     public void Login()
@@ -30,6 +31,8 @@ public class UserManager : MonoBehaviour
     IEnumerator LoginEnum()
     {
         WWWForm form = new WWWForm();
+        Debug.Log(usernameLogin.text);
+        Debug.Log(passwordLogin.text);
         form.AddField("username", usernameLogin.text);
         form.AddField("password", passwordLogin.text);
 
@@ -93,7 +96,7 @@ public class UserManager : MonoBehaviour
                 }
                 else
                 {
-                    SceneManager.LoadScene("Menu");
+                    SceneManager.LoadScene("Login");
                 }
             }
         }
