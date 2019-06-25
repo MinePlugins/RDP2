@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UserManager : MonoBehaviour
@@ -14,6 +15,11 @@ public class UserManager : MonoBehaviour
     public InputField passwordRegister;
     public InputField passwordAgainRegister;
     public InputField emailRegister;
+
+    public void MoveToRegister()
+    {
+        SceneManager.LoadScene("Login");
+    }
 
     public void Login()
     {
@@ -37,7 +43,15 @@ public class UserManager : MonoBehaviour
             }
             else
             {
-                Debug.Log(www.downloadHandler.text);
+                WebResponse res = JsonUtility.FromJson<WebResponse>(www.downloadHandler.text);
+                if (res.error)
+                {
+                    Debug.Log(res.message);
+                }
+                else
+                {
+                    SceneManager.LoadScene("Menu");
+                }
             }
         }
     }
@@ -72,7 +86,15 @@ public class UserManager : MonoBehaviour
             }
             else
             {
-                Debug.Log(www.downloadHandler.text);
+                WebResponse res = JsonUtility.FromJson<WebResponse>(www.downloadHandler.text);
+                if (res.error)
+                {
+                    Debug.Log(res.message);
+                }
+                else
+                {
+                    SceneManager.LoadScene("Menu");
+                }
             }
         }
     }
