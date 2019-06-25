@@ -7,6 +7,7 @@ public class EnigmeManager : MonoBehaviour
 {
     public TextMeshProUGUI Timer;
     public TextMeshProUGUI Malus;
+    public static int malus = 0;
     private float timercount;
     private string minutestext = "0";
     private string secondstext = "0";
@@ -41,10 +42,15 @@ public class EnigmeManager : MonoBehaviour
     {
         Malus.SetText("MALUS " + Text);
     }
+    public static void AddMalus(int tmp)
+    {
+        malus += tmp;
+    }
     // Update is called once per frame
     void Update()
     {
         timercount += Time.deltaTime;
         SetTimer(timercount);
+        SetMalus(malus.ToString());
     }
 }
