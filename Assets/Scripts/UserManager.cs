@@ -16,6 +16,11 @@ public class UserManager : MonoBehaviour
     public InputField passwordAgainRegister;
     public InputField emailRegister;
 
+    public void MoveToRegister()
+    {
+        SceneManager.LoadScene("Login");
+    }
+
     public void Login()
     {
         Debug.Log("Login");
