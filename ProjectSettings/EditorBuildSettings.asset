@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Test Portail.unity
+    guid: 0b3bca369f267bb4184bf5aac355cc1d
+  - enabled: 1
     path: Assets/Scenes/Easter/Matrix.unity
     guid: 5c63cb821d971ef4f89e05cc3589beee
   - enabled: 1
