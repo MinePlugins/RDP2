@@ -9,6 +9,8 @@ using UnityEngine.UI;
 public class UserManager : MonoBehaviour
 {
 
+    public static int userid;
+
     public InputField usernameLogin;
     public InputField passwordLogin;
 
@@ -53,6 +55,7 @@ public class UserManager : MonoBehaviour
                 }
                 else
                 {
+                    UserManager.userid = res.userid;
                     SceneManager.LoadScene("Menu");
                 }
             }
