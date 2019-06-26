@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
 public class EnigmeManager : MonoBehaviour
@@ -76,7 +77,34 @@ public class EnigmeManager : MonoBehaviour
 
         }
     }
+    IEnumerator ScoreSet(int score)
+    {
+        WWWForm form = new WWWForm();
 
+        form.AddField("score", score);
+
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/score.php?ID="+UserManager.UseID, form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                WebResponse res = JsonUtility.FromJson<WebResponse>(www.downloadHandler.text);
+                if (res.error)
+                {
+                    Debug.Log(res.message);
+                }
+                else
+                {
+                    SceneManager.LoadScene("Menu");
+                }
+            }
+        }
+    }
     public static void Finish(float endTime)
     {
         float minutes = Mathf.Floor(endTime / 60);
@@ -98,6 +126,7 @@ public class EnigmeManager : MonoBehaviour
         {
             secondstext = seconds.ToString();
         }
+
         instance.finishtext.SetText("Bravos ! Vous avez-mis " + minutes + ":" + seconds + " minutes");
         nextTime = 5;
         nextGo = true;
