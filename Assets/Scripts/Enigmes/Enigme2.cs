@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Enigme3 : MonoBehaviour
+public class Enigme2 : MonoBehaviour
 {
 
     public GameObject all;

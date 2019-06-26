@@ -83,7 +83,7 @@ public class EnigmeManager : MonoBehaviour
 
         form.AddField("score", score);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/score.php?ID="+UserManager.UseID, form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/score.php?ID="+UserManager.userid, form))
         {
             yield return www.SendWebRequest();
 
@@ -97,10 +97,6 @@ public class EnigmeManager : MonoBehaviour
                 if (res.error)
                 {
                     Debug.Log(res.message);
-                }
-                else
-                {
-                    SceneManager.LoadScene("Menu");
                 }
             }
         }
@@ -130,6 +126,7 @@ public class EnigmeManager : MonoBehaviour
         instance.finishtext.SetText("Bravos ! Vous avez-mis " + minutes + ":" + seconds + " minutes");
         nextTime = 5;
         nextGo = true;
+        ScoreSet();
         instance.finish.SetActive(true);
     }
     // Update is called once per frame
