@@ -15,6 +15,6 @@ public class StonePortal_AxisRotateByTime : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        transform.Rotate(RotateAxis * Time.deltaTime);
+        // transform.Rotate(RotateAxis * Time.deltaTime);
 	}
 }

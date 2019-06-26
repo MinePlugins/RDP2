@@ -13,20 +13,20 @@ public class StonePortal_RandomMoves : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		t = GetComponent<Transform> ();
-		StartPosition = t.position;
-		RndArg1 = Random.insideUnitSphere * 2;
-		RndArg2 = Random.insideUnitSphere * 2;
-		RndArg3 = Random.insideUnitSphere * 2;
+		// t = GetComponent<Transform> ();
+		// StartPosition = t.position;
+		// RndArg1 = Random.insideUnitSphere * 2;
+		// RndArg2 = Random.insideUnitSphere * 2;
+		// RndArg3 = Random.insideUnitSphere * 2;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		var x = Time.time * TimeMultipler;
-		var xPos = Mathf.Sin (Mathf.Sin (x*RndArg1.x) + x * RndArg1.y) + Mathf.Cos (Mathf.Cos (x) * RndArg1.z + x);
-		var yPos = Mathf.Sin (Mathf.Sin (x*RndArg2.x) + x * RndArg2.y) + Mathf.Cos (Mathf.Cos (x) * RndArg2.z + x);
-		var zPos = Mathf.Sin (Mathf.Sin (x*RndArg3.x) + x * RndArg3.y) + Mathf.Cos (Mathf.Cos (x) * RndArg3.z + x);
-		t.position = StartPosition + new Vector3(xPos, yPos, zPos) * RangeMultipler;
+		// var x = Time.time * TimeMultipler;
+		// var xPos = Mathf.Sin (Mathf.Sin (x*RndArg1.x) + x * RndArg1.y) + Mathf.Cos (Mathf.Cos (x) * RndArg1.z + x);
+		// var yPos = Mathf.Sin (Mathf.Sin (x*RndArg2.x) + x * RndArg2.y) + Mathf.Cos (Mathf.Cos (x) * RndArg2.z + x);
+		// var zPos = Mathf.Sin (Mathf.Sin (x*RndArg3.x) + x * RndArg3.y) + Mathf.Cos (Mathf.Cos (x) * RndArg3.z + x);
+		// t.position = StartPosition + new Vector3(xPos, yPos, zPos) * RangeMultipler;
 		//r.AddForce((StartPosition - new Vector3(xPos, yPos, zPos)) * RangeMultipler);
 	}
 }

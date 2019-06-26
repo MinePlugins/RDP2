@@ -20,40 +20,40 @@ public class StonePortal_Turbulence : MonoBehaviour
 
     private void Start()
     {
-        particleSys = GetComponent<ParticleSystem>();
+        // particleSys = GetComponent<ParticleSystem>();
 
-        if (particleArray==null || particleArray.Length < particleSys.maxParticles) 
-            particleArray = new ParticleSystem.Particle[particleSys.maxParticles];
+        // if (particleArray==null || particleArray.Length < particleSys.maxParticles) 
+        //     particleArray = new ParticleSystem.Particle[particleSys.maxParticles];
     }
 
 
     private void Update()
     {
-        int numParticlesAlive = particleSys.GetParticles(particleArray);
-        if (!Application.isPlaying) {
-            deltaTime = Time.realtimeSinceStartup - lastStopTime;
-            lastStopTime = Time.realtimeSinceStartup;
-        }
-        else
-            deltaTime = Time.deltaTime;
-        currentOffset += OffsetSpeed * deltaTime;
+        // int numParticlesAlive = particleSys.GetParticles(particleArray);
+        // if (!Application.isPlaying) {
+        //     deltaTime = Time.realtimeSinceStartup - lastStopTime;
+        //     lastStopTime = Time.realtimeSinceStartup;
+        // }
+        // else
+        //     deltaTime = Time.deltaTime;
+        // currentOffset += OffsetSpeed * deltaTime;
        
         
-        for (int i = 0; i < numParticlesAlive; i++) {
-            var particle = particleArray[i];
-            float timeTurbulenceStrength = 1;
-            var pos = particle.position;
-            pos.x /= Frequency.x;
-            pos.y /= Frequency.y;
-            pos.z /= Frequency.z;
-            var turbulenceVector = new Vector3();
-            turbulenceVector.x = ((Mathf.PerlinNoise(pos.z - currentOffset.z, pos.y - currentOffset.y) * 2 - 1) * Amplitude.x + GlobalForce.x) * deltaTime;
-            turbulenceVector.y = ((Mathf.PerlinNoise(pos.x - currentOffset.x, pos.z - currentOffset.z) * 2 - 1) * Amplitude.y + GlobalForce.y) * deltaTime;
-            turbulenceVector.z = ((Mathf.PerlinNoise(pos.y - currentOffset.y, pos.x - currentOffset.x) * 2 - 1) * Amplitude.z + GlobalForce.z) * deltaTime;
+        // for (int i = 0; i < numParticlesAlive; i++) {
+        //     var particle = particleArray[i];
+        //     float timeTurbulenceStrength = 1;
+        //     var pos = particle.position;
+        //     pos.x /= Frequency.x;
+        //     pos.y /= Frequency.y;
+        //     pos.z /= Frequency.z;
+        //     var turbulenceVector = new Vector3();
+        //     turbulenceVector.x = ((Mathf.PerlinNoise(pos.z - currentOffset.z, pos.y - currentOffset.y) * 2 - 1) * Amplitude.x + GlobalForce.x) * deltaTime;
+        //     turbulenceVector.y = ((Mathf.PerlinNoise(pos.x - currentOffset.x, pos.z - currentOffset.z) * 2 - 1) * Amplitude.y + GlobalForce.y) * deltaTime;
+        //     turbulenceVector.z = ((Mathf.PerlinNoise(pos.y - currentOffset.y, pos.x - currentOffset.x) * 2 - 1) * Amplitude.z + GlobalForce.z) * deltaTime;
 
-            turbulenceVector *= TurbulenceStrenght * timeTurbulenceStrength;
-            particleArray[i].position += turbulenceVector;
-		}
-        particleSys.SetParticles(particleArray, numParticlesAlive);
+        //     turbulenceVector *= TurbulenceStrenght * timeTurbulenceStrength;
+        //     particleArray[i].position += turbulenceVector;
+		// }
+        // particleSys.SetParticles(particleArray, numParticlesAlive);
     }
 }
