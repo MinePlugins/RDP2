@@ -126,7 +126,7 @@ public class EnigmeManager : MonoBehaviour
         instance.finishtext.SetText("Bravos ! Vous avez-mis " + minutes + ":" + seconds + " minutes");
         nextTime = 5;
         nextGo = true;
-        ScoreSet();
+        instance.ScoreSet(malus);
         instance.finish.SetActive(true);
     }
     // Update is called once per frame
