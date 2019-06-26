@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Easter/Matrix.unity
+    guid: 5c63cb821d971ef4f89e05cc3589beee
+  - enabled: 1
     path: Assets/Scenes/Register.unity
     guid: 46cbf83df96534c348b1524ff4e27366
   - enabled: 1
