@@ -705,16 +705,10 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-<<<<<<< HEAD:Assets/Scenes/Login Login.unity
   m_Children:
   - {fileID: 918669678}
   m_Father: {fileID: 1876186115}
   m_RootOrder: 6
-=======
-  m_Children: []
-  m_Father: {fileID: 1911879638}
-  m_RootOrder: 0
->>>>>>> e324af55af91a24a83fd3b3c948453a2343dc200:Assets/Scenes/Register.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -910,7 +904,6 @@ CanvasRenderer:
   m_GameObject: {fileID: 466233965}
   m_CullTransparentMesh: 0
 --- !u!1 &661492246
->>>>>>> e324af55af91a24a83fd3b3c948453a2343dc200:Assets/Scenes/Register.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2012,7 +2005,6 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
-<<<<<<< HEAD:Assets/Scenes/Login Login.unity
 --- !u!224 &1291627816
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2034,9 +2026,6 @@ RectTransform:
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1291627817
-=======
---- !u!114 &2034883286
->>>>>>> e324af55af91a24a83fd3b3c948453a2343dc200:Assets/Scenes/Register.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2256,7 +2245,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4457439683659063668}
   m_CullTransparentMesh: 0
-<<<<<<< HEAD:Assets/Scenes/Login Login.unity
 --- !u!1 &1470796751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2431,9 +2419,6 @@ Transform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1815405346
-=======
---- !u!1 &4457439683659063668
->>>>>>> e324af55af91a24a83fd3b3c948453a2343dc200:Assets/Scenes/Register.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2533,7 +2518,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD:Assets/Scenes/Login Login.unity
 --- !u!114 &1876186111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2553,9 +2537,6 @@ MonoBehaviour:
   passwordAgainRegister: {fileID: 0}
   emailRegister: {fileID: 0}
 --- !u!114 &1876186112
-=======
---- !u!114 &4457439683806706971
->>>>>>> e324af55af91a24a83fd3b3c948453a2343dc200:Assets/Scenes/Register.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2601,7 +2582,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-<<<<<<< HEAD:Assets/Scenes/Login Login.unity
   - {fileID: 1815405347}
   - {fileID: 344395172}
   - {fileID: 330021430}
@@ -2610,7 +2590,6 @@ RectTransform:
   - {fileID: 1291627816}
   - {fileID: 356400246}
   - {fileID: 1470796752}
-=======
   - {fileID: 4457439684460052725}
   - {fileID: 91871271}
   - {fileID: 4457439683593390532}
@@ -2622,7 +2601,6 @@ RectTransform:
   - {fileID: 1911879638}
   - {fileID: 1067916766}
   - {fileID: 2034883284}
->>>>>>> e324af55af91a24a83fd3b3c948453a2343dc200:Assets/Scenes/Register.unity
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2664,7 +2642,6 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Scenes/Login Login.unity
   m_GameObject: {fileID: 1889957456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 128, y: 256, z: 0}
@@ -2753,11 +2730,9 @@ CanvasRenderer:
   m_GameObject: {fileID: 1983447440}
   m_CullTransparentMesh: 0
 --- !u!1 &2117104558
-=======
   m_GameObject: {fileID: 4457439684460052724}
   m_CullTransparentMesh: 0
 --- !u!1 &4457439684460052724
->>>>>>> e324af55af91a24a83fd3b3c948453a2343dc200:Assets/Scenes/Register.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
