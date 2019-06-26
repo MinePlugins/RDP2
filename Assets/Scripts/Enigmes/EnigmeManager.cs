@@ -99,7 +99,7 @@ public class EnigmeManager : MonoBehaviour
             secondstext = seconds.ToString();
         }
         instance.finishtext.SetText("Bravos ! Vous avez-mis " + minutes + ":" + seconds + " minutes");
-        nextTime = 5;
+        nextTime = 10;
         nextGo = true;
         instance.finish.SetActive(true);
     }
