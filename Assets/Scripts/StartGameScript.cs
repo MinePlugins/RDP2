@@ -23,8 +23,7 @@ public class StartGameScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
     }
     public void StartFunction()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        Debug.Log("Start");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         //GameObject test = GameObject.Find("StartButtonText");
         //TextMeshProUGUI test2 = test.GetComponent<TextMeshProUGUI>();
     }
