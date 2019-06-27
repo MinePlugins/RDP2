@@ -77,13 +77,17 @@ public class EnigmeManager : MonoBehaviour
 
         }
     }
+    public void UpScore(int score)
+    {
+        ScoreSet(score);
+    }
     IEnumerator ScoreSet(int score)
     {
         WWWForm form = new WWWForm();
 
         form.AddField("score", score);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/score.php?ID="+UserManager.userid, form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://172.16.4.94/score.php?ID="+UserManager.userid, form))
         {
             yield return www.SendWebRequest();
 

@@ -38,7 +38,7 @@ public class UserManager : MonoBehaviour
         form.AddField("username", usernameLogin.text);
         form.AddField("password", passwordLogin.text);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/login.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://172.16.4.94/login.php", form))
         {
             yield return www.SendWebRequest();
 
@@ -82,7 +82,7 @@ public class UserManager : MonoBehaviour
         form.AddField("password", passwordRegister.text);
         form.AddField("email", emailRegister.text);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/register.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://172.16.4.94/register.php", form))
         {
             yield return www.SendWebRequest();
 
