@@ -8,13 +8,22 @@ using UnityEngine.SceneManagement;
 public class Enigme1 : MonoBehaviour
 {
     public GameObject all;
-
     private float endTime;
 
+    public GameObject Malus;
+    public GameObject All;
+    public GameObject Finish;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (GameManager.enigme1alreadyplayed == true)
+        {
+            Malus.SetActive(false);
+            All.SetActive(false);
+            Finish.SetActive(false);
+            SceneManager.LoadScene("AR Recognition", LoadSceneMode.Single);
+        }
     }
 
     public void False()
@@ -25,7 +34,11 @@ public class Enigme1 : MonoBehaviour
     {
         all.SetActive(false);
         endTime = EnigmeManager.timercount;
+        GameManager.enigme1alreadyplayed = true;
+        GameManager.numbEnigme += 1;
         EnigmeManager.Finish(endTime);
+
+        
 
     }
 

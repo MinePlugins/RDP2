@@ -388,6 +388,8 @@ GameObject:
   - component: {fileID: 247134175}
   - component: {fileID: 247134174}
   - component: {fileID: 247134173}
+  - component: {fileID: 247134177}
+  - component: {fileID: 247134178}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -481,7 +483,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!82 &247134177
+--- !u!114 &247134177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247134172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c20b0f862ad3cc49aaae2df47d01e7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreButton: {fileID: 591440747}
+  ScoreText1: {fileID: 10949113}
+  ScoreText2: {fileID: 1746897184}
+  ScoreText3: {fileID: 1844884798}
+  ScoreText4: {fileID: 1698996076}
+--- !u!82 &247134178
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -491,11 +510,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: de7f3dc770a1af94ba6276ed0b3c148b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 31d34bdefabd0e54d8f4820054c6a9e7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -727,7 +746,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 591440752}
+      - m_Target: {fileID: 247134177}
         m_MethodName: ScoreDisplay
         m_Mode: 1
         m_Arguments:
@@ -786,16 +805,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 591440747}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c20b0f862ad3cc49aaae2df47d01e7c, type: 3}
+  m_Script: {fileID: 11500000, guid: a0bb796bb54513f4a8411ab5ab5e05b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CadreScore: {fileID: 1316284139}
   ScoreButtonText: {fileID: 1175448362}
-  ScoreButton: {fileID: 591440747}
-  ScoreText1: {fileID: 10949113}
-  ScoreText2: {fileID: 1746897184}
-  ScoreText3: {fileID: 1844884798}
-  ScoreText4: {fileID: 1698996076}
 --- !u!1 &830843474
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,7 +984,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 129e7003df3bb2f45a62a149f6bf1f8b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0124268f048d24847b3c660c796cd4b3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.15
   m_Pitch: 1
@@ -1647,7 +1661,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 129e7003df3bb2f45a62a149f6bf1f8b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0124268f048d24847b3c660c796cd4b3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.15
   m_Pitch: 1

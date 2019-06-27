@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enigme2 : MonoBehaviour
 {
@@ -9,10 +10,20 @@ public class Enigme2 : MonoBehaviour
     public GameObject all;
     public TMP_InputField Input;
     private float endTime;
+
+    public GameObject Malus;
+    public GameObject All;
+    public GameObject Finish;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (GameManager.enigme2alreadyplayed == true)
+        {
+            Malus.SetActive(false);
+            All.SetActive(false);
+            Finish.SetActive(false);
+            SceneManager.LoadScene("AR Recognition", LoadSceneMode.Single);
+        }
     }
     public void Valider()
     {
@@ -20,6 +31,8 @@ public class Enigme2 : MonoBehaviour
         {
             all.SetActive(false);
             endTime = EnigmeManager.timercount;
+            GameManager.enigme2alreadyplayed = true;
+            GameManager.numbEnigme += 1;
             EnigmeManager.Finish(endTime);
         } else
         {
