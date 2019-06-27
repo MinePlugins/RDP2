@@ -2976,6 +2976,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   all: {fileID: 2116778553}
   Input: {fileID: 8224601111931623163}
+  AlreadyPlayed: 0
+  Malus: {fileID: 1252121900313982494}
+  All: {fileID: 2116778553}
+  Finish: {fileID: 1252121900326231733}
 --- !u!1 &3533738806778551189
 GameObject:
   m_ObjectHideFlags: 0

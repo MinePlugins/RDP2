@@ -2314,7 +2314,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   all: {fileID: 1252121899617700996}
-  Input: {fileID: 0}
+  Input: {fileID: 790286539}
+  AlreadyPlayed: 0
+  Malus: {fileID: 1252121899683673128}
+  All: {fileID: 1252121899617700996}
+  Finish: {fileID: 1252121899614133379}
 --- !u!224 &1252121899380061540
 RectTransform:
   m_ObjectHideFlags: 0

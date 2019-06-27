@@ -8,13 +8,22 @@ using UnityEngine.SceneManagement;
 public class Enigme1 : MonoBehaviour
 {
     public GameObject all;
-
     private float endTime;
 
+    public bool AlreadyPlayed = false;
+    public GameObject Malus;
+    public GameObject All;
+    public GameObject Finish;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (AlreadyPlayed == true)
+        {
+            Malus.SetActive(false);
+            All.SetActive(false);
+            Finish.SetActive(false);
+        }
     }
 
     public void False()
@@ -26,6 +35,7 @@ public class Enigme1 : MonoBehaviour
         all.SetActive(false);
         endTime = EnigmeManager.timercount;
         EnigmeManager.Finish(endTime);
+        AlreadyPlayed = true;
 
     }
 
