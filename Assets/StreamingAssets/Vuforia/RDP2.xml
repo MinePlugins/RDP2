@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="U" size="20.000000 16.440315" />
+    <ImageTarget name="Q" size="20.000000 26.935484" />
+    <ImageTarget name="O" size="20.000000 23.449781" />
+    <ImageTarget name="I" size="20.000000 30.725708" />
+    <ImageTarget name="D" size="20.000000 30.091297" />
+    <ImageTarget name="A" size="20.000000 31.449907" />
     <ImageTarget name="Matrix1" size="1.000000 1.658147" />
-    <ImageTarget name="Matrix" size="1.000000 1.408451" />
-    <ImageTarget name="10" size="1.000000 0.989305" />
-    <ImageTarget name="8" size="1.000000 1.886463" />
-    <ImageTarget name="9" size="1.000000 1.173684" />
-    <ImageTarget name="7" size="1.000000 1.258794" />
-    <ImageTarget name="5" size="1.000000 1.695833" />
-    <ImageTarget name="6" size="1.000000 1.432177" />
-    <ImageTarget name="4" size="1.000000 1.122137" />
-    <ImageTarget name="3" size="1.000000 1.590000" />
-    <ImageTarget name="2" size="1.000000 2.106667" />
-    <ImageTarget name="1" size="1.000000 1.184143" />
   </Tracking>
 </QCARConfig>
