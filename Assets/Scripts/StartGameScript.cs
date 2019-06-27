@@ -31,10 +31,14 @@ public class StartGameScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if(name == "StartButton")
+
+        AudioSource audioData;
+        if (name == "StartButton")
         {
             Cadre1.SetActive(true);
             StartButtonText.fontStyle = FontStyles.Italic;
+            audioData = GetComponent<AudioSource>();
+            audioData.Play(0);
 
 
         }

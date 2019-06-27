@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Easter/Matrix.unity
     guid: 5c63cb821d971ef4f89e05cc3589beee
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Register.unity
     guid: 46cbf83df96534c348b1524ff4e27366
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Login.unity
     guid: e9d5b5fc028f0404db0c71d9a989c891
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AR Recognition.unity
     guid: 14e929fe05c24614c908e049f5ac2e5b
   - enabled: 1
