@@ -11,7 +11,6 @@ public class Enigme2 : MonoBehaviour
     public TMP_InputField Input;
     private float endTime;
 
-    public bool AlreadyPlayed = false;
     public GameObject Malus;
     public GameObject All;
     public GameObject Finish;
