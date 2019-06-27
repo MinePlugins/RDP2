@@ -10,11 +10,14 @@ public class Enigme1 : MonoBehaviour
     public GameObject all;
 
     private float endTime;
+    public bool AlreadyPlayed = false;
+     
 
 
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     public void False()
