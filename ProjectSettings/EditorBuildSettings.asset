@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Video Crocroc.unity
-    guid: 8c9f6a76c26d5ef47bf9d22963ff271c
-  - enabled: 1
     path: Assets/Scenes/Login.unity
     guid: e9d5b5fc028f0404db0c71d9a989c891
   - enabled: 1
@@ -17,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 16fc8dd4b077f46d8af0932575281777
+  - enabled: 1
+    path: Assets/Scenes/Video louis.unity
+    guid: aa2dc84ef0cb5ee40aa3c046e17c00a9
   - enabled: 1
     path: Assets/Scenes/AR Recognition.unity
     guid: 14e929fe05c24614c908e049f5ac2e5b
@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Enigmes/Enigme3.unity
     guid: 982a6ec0604b4b9429b20bc1c3f041bf
+  - enabled: 1
+    path: Assets/Scenes/Video Crocroc.unity
+    guid: 8c9f6a76c26d5ef47bf9d22963ff271c
   m_configObjects: {}
