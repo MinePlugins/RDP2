@@ -163,8 +163,8 @@ PlayerSettings:
     Android: com.dreamteam.test
   buildNumber: {}
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 28
-  AndroidTargetSdkVersion: 28
+  AndroidMinSdkVersion: 23
+  AndroidTargetSdkVersion: 23
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1
