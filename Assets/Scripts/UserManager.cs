@@ -44,7 +44,9 @@ public class UserManager : MonoBehaviour
 
             if (www.isNetworkError || www.isHttpError)
             {
-                Debug.Log(www.error);
+                Debug.Log(" is Network error : " + www.isNetworkError);
+                Debug.Log(" is HTTP error : " + www.isHttpError);
+                Debug.Log(" error : " + www.error);
             }
             else
             {

@@ -10,7 +10,6 @@ public class Enigme1 : MonoBehaviour
     public GameObject all;
     private float endTime;
 
-    public bool AlreadyPlayed = false;
     public GameObject Malus;
     public GameObject All;
     public GameObject Finish;
@@ -18,11 +17,12 @@ public class Enigme1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (AlreadyPlayed == true)
+        if (GameManager.enigme1alreadyplayed == true)
         {
             Malus.SetActive(false);
             All.SetActive(false);
             Finish.SetActive(false);
+            SceneManager.LoadScene("AR Recognition", LoadSceneMode.Single);
         }
     }
 
@@ -34,8 +34,11 @@ public class Enigme1 : MonoBehaviour
     {
         all.SetActive(false);
         endTime = EnigmeManager.timercount;
+        GameManager.enigme1alreadyplayed = true;
+        GameManager.numbEnigme += 1;
         EnigmeManager.Finish(endTime);
-        AlreadyPlayed = true;
+
+        
 
     }
 

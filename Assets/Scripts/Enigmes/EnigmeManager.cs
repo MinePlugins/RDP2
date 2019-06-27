@@ -141,7 +141,7 @@ public class EnigmeManager : MonoBehaviour
         SetMalus(malus.ToString());
         if (nextGo && Time.time > nextTime)
         {
-            Debug.Log("HEHEHEH");
+            nextGo = false;
             SceneManager.LoadScene("AR Recognition", LoadSceneMode.Single);
         }
     }
