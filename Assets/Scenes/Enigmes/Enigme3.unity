@@ -2314,7 +2314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   all: {fileID: 1252121899617700996}
-  Input: {fileID: 0}
+  Input: {fileID: 790286539}
 --- !u!224 &1252121899380061540
 RectTransform:
   m_ObjectHideFlags: 0
