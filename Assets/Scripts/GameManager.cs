@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,16 +22,33 @@ public class GameManager : MonoBehaviour
         if (play == true)
         {
             StartGame.StartFunction();
+            AlreadyPlayed();
             
 
         }
 
     }
 
+    public static bool enigme1alreadyplayed = false;
+    public static bool enigme2alreadyplayed = false;
+    public static bool enigme3alreadyplayed = false;
 
-    public Text MyScoreTextContent;
-    void DisplayScore()
+    public void AlreadyPlayed()
     {
-        // MyScoreTextContent.text = "score = " + score.ToString();
+        if(enigme1alreadyplayed == true)
+        {
+            SceneManager.LoadScene("AR Recognition", LoadSceneMode.Single);
+        }
+        if (enigme2alreadyplayed == true)
+        {
+            SceneManager.LoadScene("AR Recognition", LoadSceneMode.Single);
+        }
+        if (enigme3alreadyplayed == true)
+        {
+            SceneManager.LoadScene("AR Recognition", LoadSceneMode.Single);
+        }
     }
+
+
+    
 }

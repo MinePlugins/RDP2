@@ -17,11 +17,12 @@ public class Enigme2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (AlreadyPlayed == true)
+        if (GameManager.enigme2alreadyplayed == true)
         {
             Malus.SetActive(false);
             All.SetActive(false);
             Finish.SetActive(false);
+            SceneManager.LoadScene("AR Recognition", LoadSceneMode.Single);
         }
     }
     public void Valider()
@@ -30,8 +31,8 @@ public class Enigme2 : MonoBehaviour
         {
             all.SetActive(false);
             endTime = EnigmeManager.timercount;
+            GameManager.enigme2alreadyplayed = true;
             EnigmeManager.Finish(endTime);
-            AlreadyPlayed = true;
         } else
         {
             EnigmeManager.AddMalus(100);
