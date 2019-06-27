@@ -11,7 +11,6 @@ public class Enigme2 : MonoBehaviour
     public TMP_InputField Input;
     private float endTime;
 
-    public bool AlreadyPlayed = false;
     public GameObject Malus;
     public GameObject All;
     public GameObject Finish;
@@ -33,6 +32,7 @@ public class Enigme2 : MonoBehaviour
             all.SetActive(false);
             endTime = EnigmeManager.timercount;
             GameManager.enigme2alreadyplayed = true;
+            GameManager.numbEnigme += 1;
             EnigmeManager.Finish(endTime);
         } else
         {

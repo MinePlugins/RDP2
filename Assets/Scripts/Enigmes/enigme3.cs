@@ -40,6 +40,7 @@ public class enigme3 : MonoBehaviour
             all.SetActive(false);
             endTime = EnigmeManager.timercount;
             GameManager.enigme3alreadyplayed = true;
+            GameManager.numbEnigme += 1;
             EnigmeManager.Finish(endTime);
         }
         else

@@ -8,6 +8,7 @@ public class VideoLouis2m17 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Screen.orientation = ScreenOrientation.LandscapeRight;
         StartCoroutine(ARload());
     }
 
@@ -19,6 +20,13 @@ public class VideoLouis2m17 : MonoBehaviour
     public IEnumerator ARload()
     {
         yield return new WaitForSeconds(138);
+        Screen.orientation = ScreenOrientation.AutoRotation;
         SceneManager.LoadScene("AR Recognition", LoadSceneMode.Single);
+    }
+    public void Skip()
+    {
+        Screen.orientation = ScreenOrientation.AutoRotation;
+        SceneManager.LoadScene("AR Recognition", LoadSceneMode.Single);
+
     }
 }

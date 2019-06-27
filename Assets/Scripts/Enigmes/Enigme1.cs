@@ -35,7 +35,9 @@ public class Enigme1 : MonoBehaviour
         all.SetActive(false);
         endTime = EnigmeManager.timercount;
         GameManager.enigme1alreadyplayed = true;
+        GameManager.numbEnigme += 1;
         EnigmeManager.Finish(endTime);
+
         
 
     }
